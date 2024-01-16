@@ -1,0 +1,18 @@
+<form (ngSubmit)="submitForm()">
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="candidate.name" name="name" required>
+  
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="candidate.email" name="email" required>
+  
+    <label for="phoneNumber">Phone Number:</label>
+    <input id="phoneNumber" [(ngModel)]="candidate.phoneNumber" name="phoneNumber" required>
+  
+    <button type="submit">Submit</button>
+
+    <label for="file">Upload Excel File:</label>
+    <input type="file" (change)="onFileSelected($event)" accept=".xls,.xlsx" id="file" name="file">
+  
+    <button type="button" (click)="uploadFile()">Upload File</button>
+  </form>
+  
